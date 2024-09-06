@@ -1,2 +1,2 @@
 # Alura-gemini-StardewValley
-Projeto criado na imersão com o google gemini.
+ Projeto da Alura com o google gemini. Com o tema Stardew Valley

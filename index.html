@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Ícone aba -->
+     <link rel="shortcut icon" href="https://stardewvalleywiki.com/mediawiki/images/6/61/Blue_Chicken.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Personagens Stardew Valley</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Personagens Do Stardew Valley
+        </h1>
+    </header>
+
+    <main>
+        <section class="menu-pesquisar">
+            <input type="text" placeholder="Digite o nome do personagem">
+
+            <button onclick="pesquisar()"> Pesquisar </button>
+        </section>
+
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+
+            <!-- <a href="https://pt.stardewvalleywiki.com/Haley" target="_blank">
+                <div class="item-resultado">
+                    <img src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Haley.png" alt="Haley, personagem de Stardew Valley">
+     -->
+                    <!-- <h2>
+                        Haley
+                    </h2>
+    
+                    <div class="descricao-meta">
+                        <p>
+                            Haley é uma aldeã que vive em Vila Pelicanos. Ela é uma dos doze personagens disponíveis para casar.
+                        </p>
+    
+                        <h3> Aniversário </h3>
+                        <p> 14 - Primavera </p>
+    
+                        <h3> Família </h3>
+                        <p>
+                            Emily -> Irmã
+                        </p>
+    
+                        <h3>
+                            Melhores presentes
+                        </h3>
+                        <ul>
+                            <li>
+                                Bolo Rosa
+                            </li>
+                            <li>
+                                Coco
+                            </li>
+                            <li>
+                                Girassol
+                            </li>
+                            <li>
+                                Salada de Frutas
+                            </li>
+                        </ul>
+                    
+                    </div>
+                    
+                </div>
+            </a>
+            
+
+            <a href="https://pt.stardewvalleywiki.com/Penny" target="_blank">
+                <div class="item-resultado">
+                    <img src="https://stardewvalleywiki.com/mediawiki/images/a/ab/Penny.png" alt="Penny, personagem de Stardew Valley">
+                    <h2>Penny</h2>
+                    <div class="descricao-meta">
+                        <p>Penny é uma aldeã que vive em Vila Pelicanos. Ela é uma estudante que trabalha em tempo parcial na biblioteca.</p>
+                        <h3>Aniversário</h3>
+                        <p>20 - Inverno</p>
+                        <h3>Família</h3>
+                        <p>Pam -> Mãe</p>
+                        <h3>Melhores presentes</h3>
+                        <ul>
+                            <li>Livro</li>
+                            <li>Peixe</li>
+                            <li>Ameixa</li>
+                            <li>Ovo de Dinossauro</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://pt.stardewvalleywiki.com/Abigail" target="_blank">
+                <div class="item-resultado">
+                    <img src="https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png" alt="Abigail, personagem de Stardew Valley">
+                    <h2>Abigail</h2>
+                    <div class="descricao-meta">
+                        <p>Abigail é uma aldeã artística e espiritual que vive em Vila Pelicanos. Ela adora pintar e passar tempo na natureza.</p>
+                        <h3>Aniversário</h3>
+                        <p>13 - Outono</p>
+                        <h3>Família</h3>
+                        <p>Caroline -> Mãe, Pierre -> Pai</p>
+                        <h3>Melhores presentes</h3>
+                        <ul>
+                            <li>Flor</li>
+                            <li>Gemas</li>
+                            <li>Comida vegana</li>
+                            <li>Arte</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+
+            <a href="https://pt.stardewvalleywiki.com/Alex" target="_blank">
+                <div class="item-resultado">
+                    <img src="https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png" alt="Alex, personagem de Stardew Valley">
+                    <h2>Alex</h2>
+                    <div class="descricao-meta">
+                        <p>Alex é um atleta e jogador de basquete que vive em Vila Pelicanos. Ele é bastante focado em sua carreira esportiva.</p>
+                        <h3>Aniversário</h3>
+                    <p>10 - Verão</p>
+                    <h3>Família</h3>
+                    <p>George -> Pai, Evelyn -> Mãe</p>
+                    <h3>Melhores presentes</h3>
+                    <ul>
+                        <li>Ovo de Dinossauro</li>
+                        <li>Peixe</li>
+                        <li>Joias</li>
+                        <li>Comida</li>
+                    </ul>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://pt.stardewvalleywiki.com/Evelyn" target="_blank">
+                <div class="item-resultado">
+                    <img src="https://stardewvalleywiki.com/mediawiki/images/8/8e/Evelyn.png" alt="Evelyn, personagem de Stardew Valley">
+                    <h2>Evelyn</h2>
+                    <div class="descricao-meta">
+                        <p>Evelyn é a mãe de Alex e uma dona de casa dedicada. Ela é conhecida por sua gentileza e cuidado com os outros.</p>
+                        <h3>Aniversário</h3>
+                        <p>17 - Primavera</p>
+                        <h3>Família</h3>
+                        <p>George -> Marido, Alex -> Filho</p>
+                        <h3>Melhores presentes</h3>
+                        <ul>
+                            <li>Flor</li>
+                            <li>Comida</li>
+                            <li>Joias</li>
+                            <li>Ovo de Dinossauro</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://pt.stardewvalleywiki.com/Feiticeiro" target="_blank">
+                <div class="item-resultado">
+                    <img src="https://stardewvalleywiki.com/mediawiki/images/c/c7/Wizard.png" alt="Feiticeiro, personagem de Stardew Valley">
+                    <h2>Feiticeiro</h2>
+                    <div class="descricao-meta">
+                        <p>O Feiticeiro é um misterioso mago que vive em uma torre ao sul da vila. Ele possui conhecimentos sobre magia e alquimia.</p>
+                        <h3>Aniversário</h3>
+                        <p>Desconhecido</p>
+                        <h3>Família</h3>
+                        <p>Desconhecida</p>
+                        <h3>Melhores presentes</h3>
+                        <ul>
+                            <li>Cristal</li>
+                            <li>Artefato</li>
+                            <li>Comida gourmet</li>
+                            <li>Ovo de Dinossauro</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+             -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            2024 - Personagens Stardew Valley. &COPY; Todos os direitos reservados.
+        </p>
+
+        <p>
+            Entre em contato pelo email: email@gmail.com
+        </p>
+    </footer>
+
+<script src="./js/dados.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
