@@ -2,14 +2,31 @@ function pesquisar (){
 
     let section = document.getElementById("resultados-pesquisa");
 
+    let campoPesquisa = document.getElementById("campo-pesquisa").value.toLowerCase();
+
+    if(!campoPesquisa){
+        section.innerHTML = '<p class="error-message"> ❗ Nada foi encontrado. Você precisa digitar o nome de um personagem ou característica.'
+        return;
+    } else if(campoPesquisa.length < 3){
+        section.innerHTML = '<p class="error-message"> ❗ Nada foi encontrado. Você precisa digitar algo com 3 ou mais caracteres. </p>';
+        return;
+    }
+    
     let resultados = "";
     
     for(let dado of dados){
     
-        resultados += `
+        nomeAldeao = dado.nomeAldeao.toLowerCase();
+        descricao = dado.descricao.toLowerCase();
+        tags = dado.tags.toLowerCase();
+
+        if (dado.nomeAldeao.toLocaleLowerCase().includes(campoPesquisa) ||
+            dado.tags.includes(campoPesquisa)) {
+
+            resultados += `
             <a href="${dado.link}" target="_blank">
                     <div class="item-resultado">
-                        <img src="${dado.foto}" alt="Penny, personagem de Stardew Valley">
+                        <img src="${dado.foto}" alt="${dado.alt}">
                         <h2>${dado.nomeAldeao}</h2>
                         <div class="descricao-meta">
                             <p>${dado.descricao}</p>
@@ -29,7 +46,13 @@ function pesquisar (){
                         </div>
                     </div>
                 </a>
-        `
+            `;
+        }
+        
+    }
+
+    if(!resultados){
+        resultados = `<p class="error-message"> ❗ Nada foi encontrado. </p>`
     }
     
     section.innerHTML = resultados;
