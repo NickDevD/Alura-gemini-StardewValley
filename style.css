@@ -11,7 +11,6 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -19,9 +18,9 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0; /* Remove a margem padrão */
     padding: 0; /* Remove o padding padrão */
-    background-image: url('./img/background.jpeg');
+    background-image: url('./img/background.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     backdrop-filter: grayscale(20%);
 }
 
@@ -29,10 +28,11 @@ body {
 h1 {
     font-size: 3rem; /* Tamanho da fonte */
     /*color: #071325;  Cor do texto */
-    color: rgb(220, 157, 21);
+    color: #ebc726;
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
     font-family: 'StardewValley';
+    text-shadow: 2px 1px 2px black;
 }
 
 /* Estiliza as seções da página */
@@ -54,6 +54,7 @@ section input {
     font-size: 1rem; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui padding e border na largura total */
     font-family: "Open Sans", sans-serif;
+    outline: 3px ridge #e29a48;
 }
 
 /* Estiliza os botões dentro das seções */
@@ -76,7 +77,6 @@ section button:hover {
     /*background-color: #30475E;  Muda a cor de fundo ao passar o mouse */
     background-color: #F2E6D0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
-    border-color: #e29a48 #e29a48 #e29a48 #e29a48;
     color: rgb(220, 157, 21);
     font-weight: bold;
     outline: 3px ridge #e29a48;
@@ -88,6 +88,7 @@ section button:hover {
     width: 60rem; /* Largura máxima da caixa de resultados */
     height: 46vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    scrollbar-color: #e29a48 #e7e7e7; /* Adiciona cor ao scroll*/
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
@@ -110,6 +111,7 @@ section button:hover {
     flex-grow: 1;
     border: 15px ridge;
     border-color: #e29a48 #e29a48 #e29a48 #e29a48;
+    margin-bottom: 5rem;
 }
 
 .item-resultado hr{
@@ -133,9 +135,6 @@ section button:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-.item-resultado p{
-    /* border-bottom: 2px solid black; */
-}
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
@@ -148,9 +147,7 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-    /* background-color: #F5F7F8;  Cor de fundo do rodapé */
     background-color: rgba(4, 46, 22, 0.701);
-    /*color: #45474B;  Cor do texto */
     color: rgb(214, 213, 213);
     font-weight: bold;
     text-align: center; /* Alinha o texto ao centro */
@@ -159,8 +156,24 @@ footer {
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+}
+
+footer b{
+    color: #ebc726;
+}
 
 
+
+footer a{
+    color: #ebc726;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer img{
+    width: 45px;
+    margin: 5px;
+    margin-top: -2px;
 }
 
 ul{
@@ -168,7 +181,7 @@ ul{
     text-align: center;
 }
 li {
-    display: inline-block;
+    display: inline-block; /* Deixa a lista horizontalmente */
     list-style: none;
     padding: 5px;
     margin: 5px;
@@ -177,12 +190,25 @@ li {
     text-align: center;
 }
 
-
-
 li:hover {
     cursor: pointer;
 }
 
+
+.error-message{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #F2E6D0;
+    border-radius: 10px;
+    padding: 20px;
+    outline: 3px ridge;
+}
+
+footer .copyright{
+    background-color: rgb(5, 48, 24);
+    margin-bottom: 0;
+}
 
 @media (max-width: 768px) {
     h1 {
@@ -193,17 +219,17 @@ li:hover {
     section input {
         width: 25rem; /* Largura dos inputs em telas menores */
         padding: 0.8rem; /* Espaçamento interno em telas menores */
+        font-size: 0.7rem;
     }
 
     .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
+        width: 34rem; /* Largura da caixa de resultados em telas menores */
+        height: 34vh; /* Altura da caixa de resultados em telas menores */
     }
 
     .item-resultado h2 {
         font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
     }
-
     
 }
 
@@ -217,6 +243,7 @@ li:hover {
 
     section input {
         width: 17rem; /* Largura total dos inputs em telas pequenas */
+        font-size: 0.7rem;
     }
 
     section button {
@@ -236,4 +263,5 @@ li:hover {
     footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
     }
+
 }
